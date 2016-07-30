@@ -1,0 +1,60 @@
+html {
+  height: 100%;
+}
+
+body {
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: -80px;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+.content {
+  min-height: calc(100vh - 80px);
+}
+
+header {
+  background-color: #0038A8;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+}
+
+section.in-page-query {
+  height: 200px;
+  margin: 2em 0 1em 0;
+}
+
+section.instructions {
+  margin: 3em 0;
+}
+
+/* footer */
+
+footer {
+  background-color: #333;
+  height: 80px;
+  width: 100%;
+}
+
+footer span {
+  color: white;
+  line-height: 80px;
+  margin-left: 1em;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #2098d1;
+  text-decoration: none;
+}
