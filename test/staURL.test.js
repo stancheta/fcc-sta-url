@@ -37,15 +37,34 @@ describe('validateURL', function() {
 });
 
 describe('getCharacter', function() {
-  it('should return a string');
-  it('should return 0 when given 0');
-  it('should return 9 when given 9');
-  it('should return a when given 10');
-  it('should return z when given 35');
-  it('should return A when given 36');
-  it('should return Z when given 61');
+  it('should return a string', function() {
+    assert.equal('string', typeof(getCharacter(0)));
+  });
+  it('should return 0 when given 0', function() {
+    assert.equal('0', getCharacter(0));
+  });
+  it('should return 9 when given 9', function() {
+    assert.equal('9', getCharacter(9));
+  });
+  it('should return a when given 10', function() {
+    assert.equal('a', getCharacter(10));
+  });
+  it('should return z when given 35', function() {
+    assert.equal('z', getCharacter(35));
+  });
+  it('should return A when given 36', function() {
+    assert.equal('A', getCharacter(36));
+  });
+  it('should return Z when given 61', function() {
+    assert.equal('Z', getCharacter(61));
+  });
 });
 
 describe('getNewID', function() {
-  it('should return an array of length 4');
+  it('should return an string', function() {
+    assert.equal('string', typeof(getNewID()));
+  });
+  it('should return an string of length 4', function() {
+    assert.equal(4, getNewID().length);
+  });
 });
