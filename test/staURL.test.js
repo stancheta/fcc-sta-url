@@ -7,15 +7,33 @@ var getCharacter = staURL.getCharacter;
 var getNewID = staURL.getNewID;
 
 describe('validateURL', function() {
-  it('should return a boolean');
-  it('should return true when given http://foo.com');
-  it('should return true when given https://foo.com');
-  it('should return true when given http://www.foobar.com/');
-  it('should return true when given https://www.foobar.de');
-  it('should return false when given www.foo.com');
-  it('should return false when given foobar.de');
-  it('should return false when given http:/www.foo.com');
-  it('should return false when given http://foo');
+  it('should return a boolean', function() {
+      assert.equal('boolean', typeof(validateURL('hello')));
+  });
+  it('should return true when given http://foo.com', function() {
+      assert.equal(true, validateURL('http://foo.com'));
+  });
+  it('should return true when given https://foo.com', function() {
+      assert.equal(true, validateURL('https://foo.com'));
+  });
+  it('should return true when given http://www.foobar.com/', function() {
+      assert.equal(true, validateURL('http://www.foobar.com/'));
+  });
+  it('should return true when given https://www.foo.co.uk', function() {
+      assert.equal(true, validateURL('https://www.foo.co.uk'));
+  });
+  it('should return false when given www.foo.com', function() {
+      assert.equal(false, validateURL('www.foo.com'));
+  });
+  it('should return false when given foobar.de', function() {
+      assert.equal(false, validateURL('foobar.de'));
+  });
+  it('should return false when given http:/www.foo.com', function() {
+      assert.equal(false, validateURL('http:/www.foo.com'));
+  });
+  it('should return false when given http://foo', function() {
+      assert.equal(false, validateURL('http://foo'));
+  });
 });
 
 describe('getCharacter', function() {
@@ -29,6 +47,5 @@ describe('getCharacter', function() {
 });
 
 describe('getNewID', function() {
-  it('should return an array');
   it('should return an array of length 4');
 });
