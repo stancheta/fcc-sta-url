@@ -21,7 +21,17 @@ app.use('/new/:url', function(req, res) {
 });
 
 app.get('/:id', function(req, res) {
-  res.redirect(retreiveURL(req.params.id));
+  retreiveURL(req.params.id, function(err, url) {
+    var errMessage = {};
+    errMessage.error = 'This url is not on the database.';
+    if(err) {
+      console.log(err);
+      res.send(errMessage);
+    }
+    else {
+      res.redirect(url);
+    }
+  })
 });
 
 app.listen(port, function() {
