@@ -35,8 +35,8 @@ var handleNewURL = (function () {
           queryReturn.textContent = err.error || data.error;
         } else {
           queryReturn.textContent = 'Your "shortened" url is ' + data.short_url;
+          queryInput.value = '';
         }
-        queryInput.value = '';
       })
     }
   }
